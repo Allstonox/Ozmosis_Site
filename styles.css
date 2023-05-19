@@ -1,0 +1,458 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: sans-serif, Arial;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 400;
+    color: white;
+    border: none;
+    scroll-behavior: smooth;
+}
+
+/* html, body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+} */
+
+:root {
+    --bg: #151716;
+    --light-bg: rgb(177, 138, 180);
+    --accent: #86489d;
+    --accent-2: white;
+    --accent-rgb-vals: 138, 43, 226;
+    --side-bar: rgba(255, 255, 255, 0.5);
+
+    --header-height: 80px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    color: black;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    padding-top: var(--header-height);
+    max-width: 1300px;
+    margin: 0px auto;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    overflow-x: hidden;
+}
+
+section {
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+section h1 {
+    color: var(--accent-2);
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: var(--header-height);
+    background: white;
+    border-bottom: solid 3px black;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    margin-left: 1rem;
+}
+
+.logo img {
+    width: 200px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+header nav h3 {
+    color: black;
+}
+
+.hamburger-menu {
+    display: none;
+    margin-right: 1rem;
+    pointer-events: none;
+}
+
+/* Intro Section Starts Here */
+
+.intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    width: 100%;
+    min-height: 200px;
+    height: 30vh;
+    /* overflow: hidden; */
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 2rem);
+    box-shadow: 0 0 8px 8px var(--bg) inset;
+}
+
+.intro img {
+    position: absolute;
+    inset: 0px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    filter: brightness(0.3) hue-rotate(0deg);
+    z-index: -1;
+}
+
+.intro h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.affirmation-1 {
+    align-self: baseline;
+}
+
+.affirmation-2 {
+    color: var(--accent);
+    align-self: center;
+    font-size: clamp(2rem, 10vw, 5rem);
+}
+
+.affirmation-3 {
+    align-self: end;
+}
+
+/* Main-graphic section here */
+
+.main-graphic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background: var(--bg);
+    }
+    
+    .main-graphic h1, q {
+        text-align: center;
+        font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+    
+    .main-graphic h1 {
+        height: fit-content;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        padding-bottom: 1rem;
+    }
+    
+    .main-graphic p {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        padding-bottom: 1rem;
+    }
+    
+    .main-graphic .icon {
+        width: clamp(30px, 5vw, 40px);
+        height: clamp(30px, 5vw, 40px);
+        color: var(--accent);
+    }
+    
+    .main-graphic-grid {
+        width: 100%;
+        height: auto;
+        gap: 1rem;
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(3, 1fr) ;
+        grid-template-rows: repeat(3, 1fr) ;
+    }
+    
+    .main-graphic-grid img {
+        height: clamp(300px, 30vw, 400px);
+        width: clamp(250px, 30vw, 400px);
+        grid-column: 2;
+        grid-row: 1 / 3;
+        padding: 1rem;
+        border-radius: 20px;
+        box-shadow: 0 0 8px 8px var(--bg) inset;
+    }
+    
+    .graphic-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .graphic-item-1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .graphic-item-2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .graphic-item-3 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    
+    .graphic-item-3 button {
+        width: 100%;
+        height: clamp(2rem, 3vw, 3rem);
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 10px;
+        background: var(--accent);
+        color: white;
+    }
+    
+    .graphic-item-3 button:hover {
+        background: white;
+        color: var(--accent);
+        transition: color, background 0.1s linear;
+    }
+    
+    .graphic-item-4 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    
+    .graphic-item-5 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+/* Products Section starts here */
+
+.products-grid {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item img {
+    border-radius: 1rem;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    filter: brightness(0.1) hue-rotate(100);
+}
+
+.products-grid .name-and-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.products-grid .name {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.products-grid .price {
+    color: white;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.products-grid .description {
+    color: gray;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.grid-item button {
+    margin: 1rem 0rem;
+    width: 100%;
+    height: clamp(2rem, 6vw, 4rem);
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-weight: 600;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.grid-item button:hover {
+    background: white;
+    color: var(--accent);
+    transition: color, background 0.1s linear;
+}
+
+/* Footer Starts Here */
+
+footer {
+    width: 100%;
+    height: 100px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer p {
+    font-weight: 600;
+}
+
+footer p, .social-icon {
+    color: black;
+}
+
+footer .logo {
+    width: 150px;
+    height: 30px;
+    margin: 0rem 1rem;
+}
+
+footer .logo img{
+    width: 150px;
+}
+
+.social-icon {
+    margin: 0rem 0.5rem;
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width:720px) {
+
+    /* Header Section */
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 0rem;
+        margin: 0rem;
+        position: absolute;
+        top: 80px;
+        left: -500px;
+        width: 50vw;
+        height: calc(100vh - 80px);
+        background: var(--side-bar);
+        transition: transform 0.3s linear;
+        backdrop-filter: blur(10px);
+    }
+
+    header nav h3{
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        margin: 0rem;
+        padding: 1rem 1rem;
+        border-bottom: solid 1px black;
+    }
+
+    header nav h3::after{
+        content: '';
+        position: absolute;
+        inset: 0px;
+        width: 100%;
+        left: -110%;
+        background: linear-gradient(90deg, rgba(var(--accent-rgb-vals), 0.3), rgba(255, 255, 255, 0.3));
+        transition: left 0.1s linear;
+    }
+
+    header nav h3:hover::after{
+        left: 0%;
+    }
+
+    .hamburger-menu {
+        display: inline;
+        pointer-events: all;
+        cursor: pointer;
+    }
+
+    .active {
+        transform: translateX(500px);
+    }
+
+    /* Main-Graphic Section */
+
+    .main-graphic-grid {
+        align-items: baseline;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 0.5fr;
+        gap: 0rem;
+    }
+
+    .main-graphic-grid img {
+        grid-column: 1 / 4;
+        grid-row: 1;
+    }
+
+    .graphic-item-1 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .graphic-item-2 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    
+    .graphic-item-3 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .graphic-item-3 button{
+        width: 300%;
+    }
+    
+    .graphic-item-4 {
+        display: none;
+    }
+    
+    .graphic-item-5 {
+        display: none;
+    }
+
+    /* Products Section */
+
+    .products-grid {
+            grid-template-columns: 1fr 1fr;
+    }
+}

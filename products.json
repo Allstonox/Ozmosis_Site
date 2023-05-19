@@ -1,0 +1,29 @@
+{
+    "Products" :
+        [
+            {
+                "name" : "Crystals",
+                "id" : 1,
+                "img" : "https://source.unsplash.com/user/wsanter",
+                "price" : "$25.00",
+                "description" : "Our shirts are super cool made with chakras...",
+                "link" : "url"
+            },
+            {
+                "name" : "T-Shirt",
+                "id" : 2,
+                "img" : "https://source.unsplash.com/user/wsanter",
+                "price" : "$20.00",
+                "description" : "Our shirts are super cool made with and other blah blah...",
+                "link" : "url"
+            },
+            {
+                "name" : "Prints",
+                "id" : 4,
+                "img" : "https://source.unsplash.com/user/wsanter",
+                "price" : "$20.00",
+                "description" : "Our shirts are super cool chakras and other blah blah...",
+                "link" : "url"
+            }
+        ]
+}
